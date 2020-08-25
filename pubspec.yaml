@@ -1,7 +1,6 @@
 name: observer_provider
 description: A Provider using Observable inputs
-version: 0.0.1
-author: Holvonix LLC
+version: 0.0.1+1
 homepage: https://github.com/holvonix-open/observer-provider
 
 environment:
