@@ -15,14 +15,14 @@ class ObserverProvider<TOutput> extends SingleChildStatelessWidget {
   final ObserverFn<TOutput> _observerFn;
 
   ObserverProvider({
-    Key key,
-    @required ObserverFn<TOutput> observerFn,
-    Widget child,
+    Key? key,
+    required ObserverFn<TOutput> observerFn,
+    Widget? child,
   })  : _observerFn = observerFn,
         super(key: key, child: child);
 
   @override
-  Widget buildWithChild(BuildContext context, Widget child) {
+  Widget buildWithChild(BuildContext context, Widget? child) {
     return Observer(builder: (ctx) {
       final out = _observerFn(ctx);
       return ProxyProvider0<TOutput>(
@@ -33,9 +33,9 @@ class ObserverProvider<TOutput> extends SingleChildStatelessWidget {
 
 class ObserverProvider1<TInput, TOutput> extends ObserverProvider<TOutput> {
   ObserverProvider1({
-    Key key,
-    @required ObserverFn1<TInput, TOutput> observerFn,
-    Widget child,
+    Key? key,
+    required ObserverFn1<TInput, TOutput> observerFn,
+    Widget? child,
   }) : super(
             key: key,
             child: child,
@@ -48,9 +48,9 @@ class ObserverProvider1<TInput, TOutput> extends ObserverProvider<TOutput> {
 class ObserverProvider2<TInput1, TInput2, TOutput>
     extends ObserverProvider<TOutput> {
   ObserverProvider2({
-    Key key,
-    @required ObserverFn2<TInput1, TInput2, TOutput> observerFn,
-    Widget child,
+    Key? key,
+    required ObserverFn2<TInput1, TInput2, TOutput> observerFn,
+    Widget? child,
   }) : super(
             key: key,
             child: child,
@@ -64,9 +64,9 @@ class ObserverProvider2<TInput1, TInput2, TOutput>
 class ObserverProvider3<TInput1, TInput2, TInput3, TOutput>
     extends ObserverProvider<TOutput> {
   ObserverProvider3({
-    Key key,
-    @required ObserverFn3<TInput1, TInput2, TInput3, TOutput> observerFn,
-    Widget child,
+    Key? key,
+    required ObserverFn3<TInput1, TInput2, TInput3, TOutput> observerFn,
+    Widget? child,
   }) : super(
             key: key,
             child: child,
