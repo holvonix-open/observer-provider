@@ -1,3 +1,6 @@
+## [1.0.0] - Sept 11, 2021
+* Flutter 2 upgrade
+
 ## [0.0.2-nullsafety.0] - April 22, 2021
 * Null safety
 
